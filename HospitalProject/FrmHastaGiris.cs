@@ -21,5 +21,11 @@ namespace HospitalProject
         {
 
         }
+
+        private void linkSignin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmHastaKayıt fr = new FrmHastaKayıt();
+            fr.Show();
+        }
     }
 }

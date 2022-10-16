@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaGiris));
             this.label1 = new System.Windows.Forms.Label();
             this.linkSignin = new System.Windows.Forms.LinkLabel();
             this.patientTC = new System.Windows.Forms.MaskedTextBox();
             this.patientPsw = new System.Windows.Forms.TextBox();
-            this.patientLogin = new System.Windows.Forms.Button();
+            this.btnPatientLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -43,7 +44,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe Script", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(168, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 54);
+            this.label1.Size = new System.Drawing.Size(343, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hasta Giriş Paneli";
             // 
@@ -56,6 +57,7 @@
             this.linkSignin.TabIndex = 1;
             this.linkSignin.TabStop = true;
             this.linkSignin.Text = "Kayıt Ol";
+            this.linkSignin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignin_LinkClicked);
             // 
             // patientTC
             // 
@@ -73,14 +75,14 @@
             this.patientPsw.Size = new System.Drawing.Size(160, 32);
             this.patientPsw.TabIndex = 3;
             // 
-            // patientLogin
+            // btnPatientLogin
             // 
-            this.patientLogin.Location = new System.Drawing.Point(253, 245);
-            this.patientLogin.Name = "patientLogin";
-            this.patientLogin.Size = new System.Drawing.Size(112, 38);
-            this.patientLogin.TabIndex = 4;
-            this.patientLogin.Text = "Giriş Yap";
-            this.patientLogin.UseVisualStyleBackColor = true;
+            this.btnPatientLogin.Location = new System.Drawing.Point(253, 245);
+            this.btnPatientLogin.Name = "btnPatientLogin";
+            this.btnPatientLogin.Size = new System.Drawing.Size(112, 38);
+            this.btnPatientLogin.TabIndex = 4;
+            this.btnPatientLogin.Text = "Giriş Yap";
+            this.btnPatientLogin.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -102,19 +104,23 @@
             // 
             // FrmHastaGiris
             // 
+            this.AcceptButton = this.btnPatientLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(636, 368);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.patientLogin);
+            this.Controls.Add(this.btnPatientLogin);
             this.Controls.Add(this.patientPsw);
             this.Controls.Add(this.patientTC);
             this.Controls.Add(this.linkSignin);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmHastaGiris";
             this.Text = "Hasta Giriş";
             this.Load += new System.EventHandler(this.FrmHastaGiris_Load);
@@ -129,7 +135,7 @@
         private System.Windows.Forms.LinkLabel linkSignin;
         private System.Windows.Forms.MaskedTextBox patientTC;
         private System.Windows.Forms.TextBox patientPsw;
-        private System.Windows.Forms.Button patientLogin;
+        private System.Windows.Forms.Button btnPatientLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
     }

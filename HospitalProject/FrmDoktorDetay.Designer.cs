@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblTC = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTC = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSikayet = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtSikayet = new System.Windows.Forms.RichTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnUpdateInfo = new System.Windows.Forms.Button();
-            this.btnDuyuru = new System.Windows.Forms.Button();
-            this.btnInternet = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnInternet = new System.Windows.Forms.Button();
+            this.btnDuyuru = new System.Windows.Forms.Button();
+            this.btnUpdateInfo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -64,23 +64,14 @@
             this.groupBox1.Text = "Doktor Bilgi";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(101, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TC:";
-            // 
-            // lblTC
-            // 
-            this.lblTC.AutoSize = true;
-            this.lblTC.Location = new System.Drawing.Point(168, 51);
-            this.lblTC.Name = "lblTC";
-            this.lblTC.Size = new System.Drawing.Size(120, 24);
-            this.lblTC.TabIndex = 1;
-            this.lblTC.Text = "00000000000";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(168, 100);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(82, 24);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "Null Null";
             // 
             // label3
             // 
@@ -91,14 +82,23 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Ad Soyad:";
             // 
-            // lblName
+            // lblTC
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(168, 100);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(82, 24);
-            this.lblName.TabIndex = 3;
-            this.lblName.Text = "Null Null";
+            this.lblTC.AutoSize = true;
+            this.lblTC.Location = new System.Drawing.Point(168, 51);
+            this.lblTC.Name = "lblTC";
+            this.lblTC.Size = new System.Drawing.Size(120, 24);
+            this.lblTC.TabIndex = 1;
+            this.lblTC.Text = "00000000000";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(101, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "TC:";
             // 
             // groupBox2
             // 
@@ -109,6 +109,14 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Randevu Detay";
+            // 
+            // txtSikayet
+            // 
+            this.txtSikayet.Location = new System.Drawing.Point(6, 31);
+            this.txtSikayet.Name = "txtSikayet";
+            this.txtSikayet.Size = new System.Drawing.Size(368, 209);
+            this.txtSikayet.TabIndex = 0;
+            this.txtSikayet.Text = "";
             // 
             // groupBox3
             // 
@@ -131,14 +139,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(653, 551);
             this.dataGridView1.TabIndex = 0;
             // 
-            // txtSikayet
-            // 
-            this.txtSikayet.Location = new System.Drawing.Point(6, 31);
-            this.txtSikayet.Name = "txtSikayet";
-            this.txtSikayet.Size = new System.Drawing.Size(368, 209);
-            this.txtSikayet.TabIndex = 0;
-            this.txtSikayet.Text = "";
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnExit);
@@ -152,23 +152,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Hızlı Erişim";
             // 
-            // btnUpdateInfo
+            // btnExit
             // 
-            this.btnUpdateInfo.Location = new System.Drawing.Point(6, 31);
-            this.btnUpdateInfo.Name = "btnUpdateInfo";
-            this.btnUpdateInfo.Size = new System.Drawing.Size(181, 38);
-            this.btnUpdateInfo.TabIndex = 0;
-            this.btnUpdateInfo.Text = "Bilgi Düzenle";
-            this.btnUpdateInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnDuyuru
-            // 
-            this.btnDuyuru.Location = new System.Drawing.Point(187, 31);
-            this.btnDuyuru.Name = "btnDuyuru";
-            this.btnDuyuru.Size = new System.Drawing.Size(181, 38);
-            this.btnDuyuru.TabIndex = 1;
-            this.btnDuyuru.Text = "Duyurular";
-            this.btnDuyuru.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(187, 75);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(181, 38);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Çıkış";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // btnInternet
             // 
@@ -179,14 +170,23 @@
             this.btnInternet.Text = "İnternet";
             this.btnInternet.UseVisualStyleBackColor = true;
             // 
-            // btnExit
+            // btnDuyuru
             // 
-            this.btnExit.Location = new System.Drawing.Point(187, 75);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(181, 38);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Çıkış";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnDuyuru.Location = new System.Drawing.Point(187, 31);
+            this.btnDuyuru.Name = "btnDuyuru";
+            this.btnDuyuru.Size = new System.Drawing.Size(181, 38);
+            this.btnDuyuru.TabIndex = 1;
+            this.btnDuyuru.Text = "Duyurular";
+            this.btnDuyuru.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateInfo
+            // 
+            this.btnUpdateInfo.Location = new System.Drawing.Point(6, 31);
+            this.btnUpdateInfo.Name = "btnUpdateInfo";
+            this.btnUpdateInfo.Size = new System.Drawing.Size(181, 38);
+            this.btnUpdateInfo.TabIndex = 0;
+            this.btnUpdateInfo.Text = "Bilgi Düzenle";
+            this.btnUpdateInfo.UseVisualStyleBackColor = true;
             // 
             // FrmDoktorDetay
             // 
@@ -199,9 +199,9 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmDoktorDetay";
-            this.Text = " ";
+            this.Text = " Doktor Paneli";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

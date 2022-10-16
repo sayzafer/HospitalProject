@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaKayıt));
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -83,14 +84,14 @@
             this.txtTC.Mask = "00000000000";
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(168, 32);
-            this.txtTC.TabIndex = 4;
+            this.txtTC.TabIndex = 3;
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(153, 133);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(168, 32);
-            this.txtLastName.TabIndex = 5;
+            this.txtLastName.TabIndex = 2;
             // 
             // label4
             // 
@@ -107,7 +108,7 @@
             this.txtTel.Mask = "(999) 000-0000";
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(168, 32);
-            this.txtTel.TabIndex = 7;
+            this.txtTel.TabIndex = 4;
             // 
             // label5
             // 
@@ -123,7 +124,7 @@
             this.txtPsw.Location = new System.Drawing.Point(153, 317);
             this.txtPsw.Name = "txtPsw";
             this.txtPsw.Size = new System.Drawing.Size(168, 32);
-            this.txtPsw.TabIndex = 9;
+            this.txtPsw.TabIndex = 5;
             // 
             // label6
             // 
@@ -143,23 +144,26 @@
             this.txtGender.Location = new System.Drawing.Point(153, 385);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(168, 32);
-            this.txtGender.TabIndex = 11;
+            this.txtGender.TabIndex = 6;
             // 
             // btnSignin
             // 
             this.btnSignin.Location = new System.Drawing.Point(153, 451);
             this.btnSignin.Name = "btnSignin";
             this.btnSignin.Size = new System.Drawing.Size(168, 46);
-            this.btnSignin.TabIndex = 12;
+            this.btnSignin.TabIndex = 7;
             this.btnSignin.Text = "Kayıt Ol";
             this.btnSignin.UseVisualStyleBackColor = true;
+            this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
             // FrmHastaKayıt
             // 
+            this.AcceptButton = this.btnSignin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Turquoise;
-            this.ClientSize = new System.Drawing.Size(434, 560);
+            this.ClientSize = new System.Drawing.Size(436, 560);
             this.Controls.Add(this.btnSignin);
             this.Controls.Add(this.txtGender);
             this.Controls.Add(this.label6);
@@ -174,7 +178,9 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmHastaKayıt";
             this.Text = "Hasta Kayıt";
             this.ResumeLayout(false);
