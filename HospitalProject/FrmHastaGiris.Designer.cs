@@ -54,7 +54,7 @@
             this.linkSignin.Location = new System.Drawing.Point(274, 303);
             this.linkSignin.Name = "linkSignin";
             this.linkSignin.Size = new System.Drawing.Size(77, 24);
-            this.linkSignin.TabIndex = 1;
+            this.linkSignin.TabIndex = 4;
             this.linkSignin.TabStop = true;
             this.linkSignin.Text = "Kayıt Ol";
             this.linkSignin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignin_LinkClicked);
@@ -65,7 +65,7 @@
             this.patientTC.Mask = "00000000000";
             this.patientTC.Name = "patientTC";
             this.patientTC.Size = new System.Drawing.Size(160, 32);
-            this.patientTC.TabIndex = 2;
+            this.patientTC.TabIndex = 1;
             this.patientTC.ValidatingType = typeof(int);
             // 
             // patientPsw
@@ -73,16 +73,18 @@
             this.patientPsw.Location = new System.Drawing.Point(236, 193);
             this.patientPsw.Name = "patientPsw";
             this.patientPsw.Size = new System.Drawing.Size(160, 32);
-            this.patientPsw.TabIndex = 3;
+            this.patientPsw.TabIndex = 2;
+            this.patientPsw.UseSystemPasswordChar = true;
             // 
             // btnPatientLogin
             // 
             this.btnPatientLogin.Location = new System.Drawing.Point(253, 245);
             this.btnPatientLogin.Name = "btnPatientLogin";
             this.btnPatientLogin.Size = new System.Drawing.Size(112, 38);
-            this.btnPatientLogin.TabIndex = 4;
+            this.btnPatientLogin.TabIndex = 3;
             this.btnPatientLogin.Text = "Giriş Yap";
             this.btnPatientLogin.UseVisualStyleBackColor = true;
+            this.btnPatientLogin.Click += new System.EventHandler(this.btnPatientLogin_Click);
             // 
             // label2
             // 
