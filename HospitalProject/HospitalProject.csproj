@@ -132,6 +132,7 @@
     <Compile Include="SekreterDetay.Designer.cs">
       <DependentUpon>SekreterDetay.cs</DependentUpon>
     </Compile>
+    <Compile Include="sqlbaglantisi.cs" />
     <EmbeddedResource Include="FrmBrans.resx">
       <DependentUpon>FrmBrans.cs</DependentUpon>
     </EmbeddedResource>
