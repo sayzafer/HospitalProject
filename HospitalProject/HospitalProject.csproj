@@ -100,6 +100,12 @@
     <Compile Include="FrmHastaKayıt.Designer.cs">
       <DependentUpon>FrmHastaKayıt.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRandevuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRandevuList.Designer.cs">
+      <DependentUpon>FrmRandevuList.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSekreterGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHastaKayıt.resx">
       <DependentUpon>FrmHastaKayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRandevuList.resx">
+      <DependentUpon>FrmRandevuList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSekreterGiris.resx">
       <DependentUpon>FrmSekreterGiris.cs</DependentUpon>
