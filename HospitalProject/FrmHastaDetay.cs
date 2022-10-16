@@ -32,14 +32,14 @@ namespace HospitalProject
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
             {
-                lblName.Text = dr[0] +" "+ dr[1];
+                lblName.Text = dr[0] + " " + dr[1];
             }
             bgl.baglanti().Close();
 
 
             //Randevu gecmisi
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular where hastaTC="+tc, bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular where hastaTC=" + tc, bgl.baglanti());
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
@@ -70,7 +70,24 @@ namespace HospitalProject
             bgl.baglanti().Close();
         }
 
+        private void txtsikayet_TextChanged(object sender, EventArgs e)
+        {
 
+        }
 
+        private void txtdoctors_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular where randevuBranc='" + txtbranches.Text + "'", bgl.baglanti());
+            da.Fill(dt);
+            dataGridView2.DataSource = dt;
+        }
+
+        private void linkUpdateInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmUpdateInfoPatient fr = new FrmUpdateInfoPatient();
+            fr.TCno = lblTC.Text;
+            fr.Show();
+        }
     }
 }

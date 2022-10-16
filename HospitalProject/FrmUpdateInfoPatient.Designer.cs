@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpdateInfoPatient));
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtGender = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,9 +49,10 @@
             this.btnUpdate.Location = new System.Drawing.Point(169, 433);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(168, 46);
-            this.btnUpdate.TabIndex = 25;
+            this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtGender
             // 
@@ -61,7 +63,7 @@
             this.txtGender.Location = new System.Drawing.Point(169, 367);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(168, 32);
-            this.txtGender.TabIndex = 24;
+            this.txtGender.TabIndex = 6;
             // 
             // label6
             // 
@@ -77,7 +79,7 @@
             this.txtPsw.Location = new System.Drawing.Point(169, 299);
             this.txtPsw.Name = "txtPsw";
             this.txtPsw.Size = new System.Drawing.Size(168, 32);
-            this.txtPsw.TabIndex = 22;
+            this.txtPsw.TabIndex = 5;
             // 
             // label5
             // 
@@ -94,7 +96,7 @@
             this.txtTel.Mask = "(999) 000-0000";
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(168, 32);
-            this.txtTel.TabIndex = 20;
+            this.txtTel.TabIndex = 4;
             // 
             // label4
             // 
@@ -110,7 +112,7 @@
             this.txtLastName.Location = new System.Drawing.Point(169, 115);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(168, 32);
-            this.txtLastName.TabIndex = 18;
+            this.txtLastName.TabIndex = 2;
             // 
             // txtTC
             // 
@@ -118,7 +120,7 @@
             this.txtTC.Mask = "00000000000";
             this.txtTC.Name = "txtTC";
             this.txtTC.Size = new System.Drawing.Size(168, 32);
-            this.txtTC.TabIndex = 17;
+            this.txtTC.TabIndex = 3;
             // 
             // label3
             // 
@@ -143,7 +145,7 @@
             this.txtName.Location = new System.Drawing.Point(169, 50);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(168, 32);
-            this.txtName.TabIndex = 14;
+            this.txtName.TabIndex = 1;
             // 
             // label1
             // 
@@ -154,10 +156,12 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "TC:";
             // 
-            // FrmUpdateInfo
+            // FrmUpdateInfoPatient
             // 
+            this.AcceptButton = this.btnUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(447, 535);
             this.Controls.Add(this.btnUpdate);
@@ -174,9 +178,12 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FrmUpdateInfo";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.Name = "FrmUpdateInfoPatient";
             this.Text = "Bilgileri Güncelle";
+            this.Load += new System.EventHandler(this.FrmUpdateInfoPatient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
