@@ -32,8 +32,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTC = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDuyuru = new System.Windows.Forms.RichTextBox();
             this.btnOlustur = new System.Windows.Forms.Button();
@@ -57,9 +57,10 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnRandevuList = new System.Windows.Forms.Button();
+            this.btnBransPanel = new System.Windows.Forms.Button();
+            this.btnDoktorPanel = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,8 +73,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblName);
+            this.groupBox1.Controls.Add(this.lblTC);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(26, 19);
@@ -101,24 +102,24 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Ad Soyad:";
             // 
-            // label3
+            // lblTC
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(140, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "00000000000";
+            this.lblTC.AutoSize = true;
+            this.lblTC.Location = new System.Drawing.Point(140, 56);
+            this.lblTC.Name = "lblTC";
+            this.lblTC.Size = new System.Drawing.Size(120, 24);
+            this.lblTC.TabIndex = 2;
+            this.lblTC.Text = "00000000000";
             // 
-            // label4
+            // lblName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(140, 104);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Null Null";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(140, 104);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(82, 24);
+            this.lblName.TabIndex = 3;
+            this.lblName.Text = "Null Null";
+            this.lblName.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox2
             // 
@@ -150,6 +151,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Controls.Add(this.btnUpdate);
             this.groupBox3.Controls.Add(this.btnKaydet);
             this.groupBox3.Controls.Add(this.txtTC);
@@ -277,7 +279,7 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(124, 405);
+            this.btnKaydet.Location = new System.Drawing.Point(124, 412);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(179, 48);
             this.btnKaydet.TabIndex = 2;
@@ -286,7 +288,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(124, 459);
+            this.btnUpdate.Location = new System.Drawing.Point(124, 466);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(179, 48);
             this.btnUpdate.TabIndex = 12;
@@ -315,9 +317,9 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button4);
-            this.groupBox6.Controls.Add(this.button3);
-            this.groupBox6.Controls.Add(this.button5);
+            this.groupBox6.Controls.Add(this.btnDoktorPanel);
+            this.groupBox6.Controls.Add(this.btnBransPanel);
+            this.groupBox6.Controls.Add(this.btnRandevuList);
             this.groupBox6.Location = new System.Drawing.Point(28, 566);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(731, 96);
@@ -347,32 +349,42 @@
             this.dataGridView2.Size = new System.Drawing.Size(391, 322);
             this.dataGridView2.TabIndex = 0;
             // 
-            // button5
+            // btnRandevuList
             // 
-            this.button5.Location = new System.Drawing.Point(483, 41);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(203, 35);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Randevu Listele";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnRandevuList.Location = new System.Drawing.Point(483, 41);
+            this.btnRandevuList.Name = "btnRandevuList";
+            this.btnRandevuList.Size = new System.Drawing.Size(203, 35);
+            this.btnRandevuList.TabIndex = 15;
+            this.btnRandevuList.Text = "Randevu Listele";
+            this.btnRandevuList.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnBransPanel
             // 
-            this.button3.Location = new System.Drawing.Point(254, 41);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(203, 35);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Branş Paneli";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBransPanel.Location = new System.Drawing.Point(254, 41);
+            this.btnBransPanel.Name = "btnBransPanel";
+            this.btnBransPanel.Size = new System.Drawing.Size(203, 35);
+            this.btnBransPanel.TabIndex = 16;
+            this.btnBransPanel.Text = "Branş Paneli";
+            this.btnBransPanel.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnDoktorPanel
             // 
-            this.button4.Location = new System.Drawing.Point(40, 41);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(203, 35);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Doktor Paneli";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDoktorPanel.Location = new System.Drawing.Point(40, 41);
+            this.btnDoktorPanel.Name = "btnDoktorPanel";
+            this.btnDoktorPanel.Size = new System.Drawing.Size(203, 35);
+            this.btnDoktorPanel.TabIndex = 17;
+            this.btnDoktorPanel.Text = " Doktor Paneli";
+            this.btnDoktorPanel.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(124, 378);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(89, 28);
+            this.checkBox1.TabIndex = 13;
+            this.checkBox1.Text = "Durum";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // SekreterDetay
             // 
@@ -407,8 +419,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblTC;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
@@ -435,8 +447,9 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnDoktorPanel;
+        private System.Windows.Forms.Button btnBransPanel;
+        private System.Windows.Forms.Button btnRandevuList;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
