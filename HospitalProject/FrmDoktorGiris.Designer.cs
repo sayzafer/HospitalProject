@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorGiris));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.patientLogin = new System.Windows.Forms.Button();
-            this.patientPsw = new System.Windows.Forms.TextBox();
-            this.patientTC = new System.Windows.Forms.MaskedTextBox();
+            this.txtLogin = new System.Windows.Forms.Button();
+            this.txtPsw = new System.Windows.Forms.TextBox();
+            this.txtTC = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -54,30 +55,34 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "TC:";
             // 
-            // patientLogin
+            // txtLogin
             // 
-            this.patientLogin.Location = new System.Drawing.Point(255, 227);
-            this.patientLogin.Name = "patientLogin";
-            this.patientLogin.Size = new System.Drawing.Size(112, 38);
-            this.patientLogin.TabIndex = 11;
-            this.patientLogin.Text = "Giriş Yap";
-            this.patientLogin.UseVisualStyleBackColor = true;
+            this.txtLogin.Location = new System.Drawing.Point(255, 227);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(112, 38);
+            this.txtLogin.TabIndex = 11;
+            this.txtLogin.Text = "Giriş Yap";
+            this.txtLogin.UseVisualStyleBackColor = true;
+            this.txtLogin.Click += new System.EventHandler(this.patientLogin_Click);
             // 
-            // patientPsw
+            // txtPsw
             // 
-            this.patientPsw.Location = new System.Drawing.Point(212, 177);
-            this.patientPsw.Name = "patientPsw";
-            this.patientPsw.Size = new System.Drawing.Size(199, 32);
-            this.patientPsw.TabIndex = 10;
+            this.txtPsw.Location = new System.Drawing.Point(212, 177);
+            this.txtPsw.Name = "txtPsw";
+            this.txtPsw.Size = new System.Drawing.Size(199, 32);
+            this.txtPsw.TabIndex = 10;
+            this.txtPsw.Text = "1234";
+            this.txtPsw.UseSystemPasswordChar = true;
             // 
-            // patientTC
+            // txtTC
             // 
-            this.patientTC.Location = new System.Drawing.Point(212, 128);
-            this.patientTC.Mask = "00000000000";
-            this.patientTC.Name = "patientTC";
-            this.patientTC.Size = new System.Drawing.Size(199, 32);
-            this.patientTC.TabIndex = 9;
-            this.patientTC.ValidatingType = typeof(int);
+            this.txtTC.Location = new System.Drawing.Point(212, 128);
+            this.txtTC.Mask = "00000000000";
+            this.txtTC.Name = "txtTC";
+            this.txtTC.Size = new System.Drawing.Size(199, 32);
+            this.txtTC.TabIndex = 9;
+            this.txtTC.Text = "11111111111";
+            this.txtTC.ValidatingType = typeof(int);
             // 
             // label1
             // 
@@ -85,26 +90,31 @@
             this.label1.Font = new System.Drawing.Font("Segoe Script", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(97, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(381, 54);
+            this.label1.Size = new System.Drawing.Size(367, 52);
             this.label1.TabIndex = 7;
             this.label1.Text = "Doktor Giriş Paneli";
             // 
             // FrmDoktorGiris
             // 
+            this.AcceptButton = this.txtLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Turquoise;
             this.ClientSize = new System.Drawing.Size(587, 349);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.patientLogin);
-            this.Controls.Add(this.patientPsw);
-            this.Controls.Add(this.patientTC);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.txtPsw);
+            this.Controls.Add(this.txtTC);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorGiris";
-            this.Text = "FrmDoktorGiris";
+            this.Text = "Doktor Giriş";
+            this.Load += new System.EventHandler(this.FrmDoktorGiris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,9 +124,9 @@
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button patientLogin;
-        private System.Windows.Forms.TextBox patientPsw;
-        private System.Windows.Forms.MaskedTextBox patientTC;
+        private System.Windows.Forms.Button txtLogin;
+        private System.Windows.Forms.TextBox txtPsw;
+        private System.Windows.Forms.MaskedTextBox txtTC;
         private System.Windows.Forms.Label label1;
     }
 }
