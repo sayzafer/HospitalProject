@@ -52,9 +52,6 @@ namespace HospitalProject
                 txtbranches.Items.Add(dr2[0]);
             }
             bgl.baglanti().Close();
-
-
-
         }
 
         private void txtbranches_SelectedIndexChanged(object sender, EventArgs e)
@@ -78,7 +75,7 @@ namespace HospitalProject
         private void txtdoctors_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular where randevuBranc='" + txtbranches.Text + "'", bgl.baglanti());
+            SqlDataAdapter da = new SqlDataAdapter("select * from Tbl_Randevular where randevuBranc='" + txtbranches.Text + "'" + "and randevuDoktor='" + txtdoctors.Text + "' and randevuDurum=0", bgl.baglanti());
             da.Fill(dt);
             dataGridView2.DataSource = dt;
         }
@@ -88,6 +85,24 @@ namespace HospitalProject
             FrmUpdateInfoPatient fr = new FrmUpdateInfoPatient();
             fr.TCno = lblTC.Text;
             fr.Show();
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView2.SelectedCells[0].RowIndex;
+            txtID.Text = dataGridView2.Rows[secilen].Cells[0].Value.ToString();
+        }
+
+        private void btnRandevuAl_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("update Tbl_Randevular set randevuDurum=1,hastaTC=@p1,randevuSikayet=@p2 where randevuId=@p3", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", lblTC.Text);
+            komut.Parameters.AddWithValue("@p2", txtsikayet.Text);
+            komut.Parameters.AddWithValue("@p3", txtID.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            txtsikayet.Clear();
+            MessageBox.Show("Randevu Alındı!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -98,7 +98,9 @@ namespace HospitalProject
             komut.Parameters.AddWithValue("@p1", txtDuyuru.Text);
             komut.ExecuteNonQuery();
             bgl.baglanti().Close();
+            txtDuyuru.Clear();
             MessageBox.Show("Duyuru Oluşturuldu");
+
         }
 
         private void btnDoktorPanel_Click(object sender, EventArgs e)

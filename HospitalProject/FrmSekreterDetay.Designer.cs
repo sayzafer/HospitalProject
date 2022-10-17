@@ -40,7 +40,6 @@
             this.txtDuyuru = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.txtTC = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -154,7 +153,6 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.btnUpdate);
             this.groupBox3.Controls.Add(this.btnKaydet);
             this.groupBox3.Controls.Add(this.txtTC);
             this.groupBox3.Controls.Add(this.label10);
@@ -185,18 +183,9 @@
             this.checkBox1.Text = "Durum";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(124, 466);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(179, 48);
-            this.btnUpdate.TabIndex = 12;
-            this.btnUpdate.Text = "Güncelle";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(124, 412);
+            this.btnKaydet.Location = new System.Drawing.Point(124, 430);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(179, 48);
             this.btnKaydet.TabIndex = 2;
@@ -443,7 +432,6 @@
         private System.Windows.Forms.Button btnOlustur;
         private System.Windows.Forms.RichTextBox txtDuyuru;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.MaskedTextBox txtTC;
         private System.Windows.Forms.Label label10;
